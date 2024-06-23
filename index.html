@@ -1,11 +1,163 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Album Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            screens: {
+              md: "1390px",
+            },
+            extend: {
+              fontFamily: {
+                outfit: ["'Outfit',sans-serif"],
+                raleway: ["'Raleway',sans-serif"],
+              },
+            },
+          },
+        };
+      </script>
 </head>
-<body>
-<script src="./script.js"></script>  
+<body class="h-screen">
+<div>
+<!--Abstract-->
+<div class="flex justify-between py-2 px-10 bg-black">  
+<button class="flex gap-2 items-baseline text-white"><i class="fa-regular fa-circle-stop" style="color: white;"></i>
+<span>Abstract</span>
+<span class="border border-1 border-white h-5 items-baseline my-auto"></span>
+<span>Help center</span>
+</button>
+        
+<div class="text-white space-x-2 text-[14px] ml-auto hidden md:block">
+<button class="border border-x-1 border-white p-1 rounded-lg">Submit a request</button>
+<button class="border border-x-1 border-white py-1 px-3 rounded-lg bg-blue-700">Sign in</button>
+</div>
+
+<!-- Buttons -->
+<div class="flex flex-row gap-3 block md:hidden">
+    <button><i class="fa-solid fa-magnifying-glass text-white"></i></button>
+    <button><i class="fa-solid fa-bars text-white block"></i></button>
+    <button><i class="fa-solid fa-xmark text-white hidden"></i></button>
+</div>
+</div>
+ <!-- hidden menu -->
+<div class="bg-black items-center flex-col justify-center w-full hidden">
+<div class="border-white border w-full mb-10"></div>
+<button class="text-white text-center ml-36 mb-4"><a href="">Submit a request</a></button>
+<div class="border-white border w-full"></div>
+<button class="text-white text-center ml-44 my-6"><a href="">Sign In</a></button>
+</div>
+
+<!-- Search -->
+<div class="bg-violet-100 px-4 pt-20 pb-24">
+<h1 class="text-[30px] text-center font-bold md:text-[70px]">How can we help ?</h1>
+ 
+<div class="relative flex items-center justify-center mt-3 ">
+<input class="w-[100%] p-3 rounded-md border-black  border md:w-[50%] md:p-1 " type="text" placeholder="Search"><a href="" class="absolute ml-80"><i class="fa-solid fa-arrow-right-long "></i></a>
+</div>
+</div>
+
+
+<!-- Grids -->
+<div class="flex flex-col gap-16 mt-20 ml-9 mb-32 md:grid md:grid-cols-2 md:grid-rows-3 md:bg-white md:pt-3 md:space-x-6 md:space-y-6">
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Using Abstract</p>
+    <span class="flex flex-row"><img src="./images/icon-versions.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Abstract lets you manage, version and document your designs in one place</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Manage your account</p>
+    <span class="flex flex-row"><img src="./images/icon-account.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Configure your account settings, such as your email, profile details, and password.</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Manage organizations, teams, and projects</p>
+    <span class="flex flex-row"><img src="./images/icon-organizations.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Use Abstract organizations, teams, and projects to organize your people and your work.</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Manage billing</p>
+    <span class="flex flex-row"><img src="./images/icon-billing.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Change subscriptions and payment details.</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Authenticate to Abstract</p>
+    <span class="flex flex-row"><img src="./images/icon-authenticate.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+
+<div class="md:ml-6 md:mt-6">
+    <p class=" ml-20 text-[22px] font-bold md:text-[12px] md:ml-9 ">Abstract support</p>
+    <span class="flex flex-row"><img src="./images/icon-comment.png" alt="" class="w-14 h-14"><p class=" ml-6 text-[22px] w-[290px] md:text-[12px] md:ml-2">Get in touch with a human.</p></span>
+    <p><a href="" class="text-[blue] ml-20 mr-4 text-[20px]  md:text-[12px] md:ml-9">Learn more</a><span><a href=""><i class="fa-solid fa-arrow-right-long icon-small text-blue-400 "></i></a></span></p>
+</div>
+</div>
+
+<!-- about -->
+<div class="grid grid-cols-2 grid-rows-2 pt-5 pl-3 pb-3 bg-black w-full md:pt-4 md:pb-0 md:px-8 md:flex md:flex-row md:gap-14 md:mt-20 ">
+
+    <div class="text-white mb-16">
+        <p class="text-[20px] md:text-[14px] font-bold mb-1">Abstract</p>
+        <p class=" md:text-[10px]">Start Trial</p>
+        <p class=" md:text-[10px]">Pricing</p>
+        <p class=" md:text-[10px]">Download</p>
+    </div>
+    
+    <div class="text-white">
+        <p class="text-[20px] md:text-[14px] font-bold mb-1">Resources</p>
+        <p class=" md:text-[10px]">Blog</p>
+        <p class=" md:text-[10px]">Help Center</p>
+        <p class=" md:text-[10px]">Release Notes</p>
+        <p class=" md:text-[10px]">Status</p>
+    </div>
+    
+    <div class="text-white">
+        <p class="text-[20px] md:text-[14px] font-bold mb-1">Community</p>
+        <p class=" md:text-[10px]">Twitter</p>
+        <p class=" md:text-[10px]">LInkedln</p>
+        <p class=" md:text-[10px]">Facebook</p>
+        <p class=" md:text-[10px]">Dribbble</p>
+        <p class=" md:text-[10px]">Podcast</p>
+    </div>
+    
+    
+    <div class="text-white">
+        <p class="text-[20px] md:text-[14px] font-bold mb-1">Company</p>
+        <p class=" md:text-[10px]">About Us</p>
+        <p class=" md:text-[10px]">Careers</p>
+        <p class="mb-6 md:text-[10px]">Legal</p>
+        <p class="font-bold md:text-[14px] md:mt-2">Contact us</p>
+        <p class=" md:text-[10px]">info@abstract.com</p>
+    </div>
+    
+    
+    <div class="hidden md:block text-white mt-36 mb-9">
+    <span class="flex flex-row gap-2"><i class="fa-solid fa-copyright"></i><p class="text-[10px] font-bold mb-1">Copyrigth 2022</p></span>
+    <p class="text-[10px]">Abstract Studio Design, Inc.</p>
+    <p class="text-[10px]">All rights reserved</p>
+      
+
+    </div>
+    
+    </div>
+
+
+
+</div>
+<script src="./script.js"></script>
 </body>
 </html>
